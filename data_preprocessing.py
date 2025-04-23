@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
 def load_and_preprocess_data(file_path):
-    """Loads the dataset and preprocesses it for modeling."""
+    """Loading the dataset and preprocesses it for modeling."""
     df = pd.read_csv(file_path)
     df = pd.get_dummies(df, columns=['mainroad', 'guestroom', 'basement', 'hotwaterheating', 'airconditioning', 'prefarea', 'furnishingstatus'], drop_first=True)
     X = df.drop('price', axis=1)
