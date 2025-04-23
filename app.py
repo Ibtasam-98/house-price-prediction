@@ -10,7 +10,7 @@ import joblib
 app = Flask(__name__)
 
 # Load and preprocess the data
-df = pd.read_csv("housing.csv")
+df = pd.read_csv("dataset/housing.csv")
 
 # Outlier Handling (Remove outliers based on z-score)
 z_scores = np.abs(stats.zscore(df['price']))
